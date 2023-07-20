@@ -1,8 +1,6 @@
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-public class CreditDetails {
-
-
+public class Currency {
     @JsonProperty("currencyCodeA")
     private int currencyCodeA;
     @JsonProperty("currencyCodeB")
@@ -16,10 +14,10 @@ public class CreditDetails {
     @JsonProperty("rateCross")
     private float rateCross;
 
-    public CreditDetails() {
+    public Currency() {
     }
 
-    public CreditDetails(int currencyCodeA, int currencyCodeB, int date, float rateSell, float rateBuy, float rateCross) {
+    public Currency(int currencyCodeA, int currencyCodeB, int date, float rateSell, float rateBuy, float rateCross) {
         this.currencyCodeA = currencyCodeA;
         this.currencyCodeB = currencyCodeB;
         this.date = date;
@@ -75,10 +73,9 @@ public class CreditDetails {
     public void setRateCross(float rateCross) {
         this.rateCross = rateCross;
     }
-
     @Override
     public String toString() {
-        return "CreditDetails{" +
+        return "Currency{" +
                 "currencyCodeA=" + currencyCodeA +
                 ", currencyCodeB=" + currencyCodeB +
                 ", date=" + date +
@@ -87,6 +84,5 @@ public class CreditDetails {
                 ", rateCross=" + rateCross +
                 '}';
     }
-
 
 }
